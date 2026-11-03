@@ -1,0 +1,81 @@
+
+###
+GET http://127.0.0.1:8000/questions/
+
+
+###
+POST http://127.0.0.1:8000/questions/
+Content-Type: application/json
+
+{
+  "question": "Which data type is mutable?",
+  "option_a": "Tuple",
+  "option_b": "String",
+  "option_c": "List",
+  "option_d": "Integer",
+  "correct_answer": "List"
+}
+
+
+###
+GET http://127.0.0.1:8000/questions/2/
+
+
+###
+PUT http://127.0.0.1:8000/questions/1/
+Content-Type: application/json
+
+{
+  "question": "What is Django?",
+  "option_a": "Python framework",
+  "option_b": "Database",
+  "option_c": "Browser",
+  "option_d": "Operating system",
+  "correct_answer": "Python framework"
+}
+
+
+###
+DELETE http://127.0.0.1:8000/questions/1/
+
+
+###
+GET http://127.0.0.1:8000/submission/
+Accept: application/json
+
+
+###
+POST http://127.0.0.1:8000/submission/
+Content-Type: application/json
+
+{
+  "student_name": "jaithri",
+  "question_id": 1,
+  "selected_answer": "option_a"
+}
+
+
+###
+GET http://127.0.0.1:8000/submission/2/
+
+###
+PUT http://127.0.0.1:8000/submission/5/
+Content-Type: application/json
+
+{
+  "student_name": "jaithri",
+  "question_id": 1,
+  "selected_answer": "option_a"
+}
+
+###
+DELETE http://127.0.0.1:8000/submission/2/
+
+###
+PUT http://127.0.0.1:8000/submission/4/evaluate/
+Content-Type: application/json
+
+{
+  "point" : 5,
+  "remarks" : ""
+}
